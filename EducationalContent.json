@@ -1,0 +1,96 @@
+{
+  "name": "EducationalContent",
+  "type": "object",
+  "properties": {
+    "subject": {
+      "type": "string",
+      "enum": [
+        "mathematics",
+        "science",
+        "physics",
+        "engineering"
+      ],
+      "description": "Subject category"
+    },
+    "chapter_name": {
+      "type": "string",
+      "description": "Name of the chapter"
+    },
+    "grade_level": {
+      "type": "string",
+      "enum": [
+        "6",
+        "7",
+        "8",
+        "9",
+        "10"
+      ],
+      "description": "Target grade level"
+    },
+    "concepts": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Key concepts covered"
+    },
+    "questions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "question": {
+            "type": "string"
+          },
+          "options": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "correct_answer": {
+            "type": "number"
+          },
+          "explanation": {
+            "type": "string"
+          },
+          "difficulty": {
+            "type": "string",
+            "enum": [
+              "easy",
+              "medium",
+              "hard"
+            ]
+          }
+        }
+      },
+      "description": "Educational questions for the chapter"
+    },
+    "activities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "activity_name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "game_type": {
+            "type": "string"
+          },
+          "learning_objective": {
+            "type": "string"
+          }
+        }
+      },
+      "description": "Educational activities and games"
+    }
+  },
+  "required": [
+    "subject",
+    "chapter_name",
+    "grade_level"
+  ]
+}

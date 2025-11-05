@@ -1,0 +1,64 @@
+{
+  "name": "GameSession",
+  "type": "object",
+  "properties": {
+    "student_id": {
+      "type": "string",
+      "description": "ID of the student"
+    },
+    "subject": {
+      "type": "string",
+      "enum": [
+        "math",
+        "science",
+        "technology"
+      ],
+      "description": "Subject being studied"
+    },
+    "chapter": {
+      "type": "string",
+      "description": "Chapter or topic name"
+    },
+    "game_type": {
+      "type": "string",
+      "enum": [
+        "board_game",
+        "quiz",
+        "puzzle",
+        "simulation"
+      ],
+      "description": "Type of game played"
+    },
+    "points_earned": {
+      "type": "number",
+      "default": 0,
+      "description": "Points earned in this session"
+    },
+    "time_spent": {
+      "type": "number",
+      "description": "Time spent in minutes"
+    },
+    "completion_rate": {
+      "type": "number",
+      "description": "Percentage of game completed"
+    },
+    "correct_answers": {
+      "type": "number",
+      "description": "Number of correct answers"
+    },
+    "total_questions": {
+      "type": "number",
+      "description": "Total questions attempted"
+    },
+    "offline_session": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether this was played offline"
+    }
+  },
+  "required": [
+    "student_id",
+    "subject",
+    "chapter"
+  ]
+}

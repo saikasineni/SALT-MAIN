@@ -1,0 +1,79 @@
+{
+  "name": "Doubt",
+  "type": "object",
+  "properties": {
+    "student_id": {
+      "type": "string",
+      "description": "ID of the student who got it wrong"
+    },
+    "game_name": {
+      "type": "string",
+      "description": "Name of the game where doubt occurred"
+    },
+    "subject": {
+      "type": "string",
+      "enum": [
+        "mathematics",
+        "science",
+        "physics",
+        "technology",
+        "engineering"
+      ],
+      "description": "Subject category"
+    },
+    "chapter": {
+      "type": "string",
+      "description": "Chapter or topic name"
+    },
+    "question": {
+      "type": "string",
+      "description": "The question that was answered wrong"
+    },
+    "student_answer": {
+      "type": "string",
+      "description": "Answer that student selected (wrong)"
+    },
+    "correct_answer": {
+      "type": "string",
+      "description": "The correct answer"
+    },
+    "explanation": {
+      "type": "string",
+      "description": "Detailed explanation of the solution"
+    },
+    "options": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "All answer options shown"
+    },
+    "resolved": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether student understands now"
+    },
+    "reviewed_count": {
+      "type": "number",
+      "default": 0,
+      "description": "How many times student reviewed this doubt"
+    },
+    "difficulty_level": {
+      "type": "string",
+      "enum": [
+        "easy",
+        "medium",
+        "hard"
+      ],
+      "description": "Question difficulty"
+    }
+  },
+  "required": [
+    "student_id",
+    "game_name",
+    "subject",
+    "question",
+    "correct_answer",
+    "explanation"
+  ]
+}

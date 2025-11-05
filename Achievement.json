@@ -1,0 +1,48 @@
+{
+  "name": "Achievement",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Achievement name"
+    },
+    "description": {
+      "type": "string",
+      "description": "Achievement description"
+    },
+    "badge_icon": {
+      "type": "string",
+      "description": "Icon identifier for the badge"
+    },
+    "subject": {
+      "type": "string",
+      "enum": [
+        "math",
+        "science",
+        "technology",
+        "general"
+      ],
+      "description": "Subject category"
+    },
+    "points_required": {
+      "type": "number",
+      "description": "Points needed to unlock"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "points",
+        "streak",
+        "completion",
+        "speed",
+        "accuracy"
+      ],
+      "description": "Type of achievement"
+    }
+  },
+  "required": [
+    "name",
+    "description",
+    "points_required"
+  ]
+}

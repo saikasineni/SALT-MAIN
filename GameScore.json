@@ -1,0 +1,79 @@
+{
+  "name": "GameScore",
+  "type": "object",
+  "properties": {
+    "student_id": {
+      "type": "string",
+      "description": "ID of the student"
+    },
+    "game_name": {
+      "type": "string",
+      "enum": [
+        "tic_tac_toe",
+        "dice_game",
+        "card_game",
+        "chess",
+        "word_search",
+        "trivia",
+        "memory_game",
+        "snake_game",
+        "puzzle_game",
+        "strategy_game"
+      ],
+      "description": "Name of the game played"
+    },
+    "subject": {
+      "type": "string",
+      "enum": [
+        "mathematics",
+        "science",
+        "physics",
+        "engineering"
+      ],
+      "description": "Subject category"
+    },
+    "chapter": {
+      "type": "string",
+      "description": "Chapter or topic"
+    },
+    "grade_level": {
+      "type": "string",
+      "enum": [
+        "6",
+        "7",
+        "8",
+        "9",
+        "10"
+      ],
+      "description": "Grade level of content"
+    },
+    "score": {
+      "type": "number",
+      "description": "Points earned"
+    },
+    "time_spent": {
+      "type": "number",
+      "description": "Time spent in minutes"
+    },
+    "accuracy": {
+      "type": "number",
+      "description": "Accuracy percentage"
+    },
+    "difficulty_level": {
+      "type": "string",
+      "enum": [
+        "easy",
+        "medium",
+        "hard",
+        "expert"
+      ],
+      "description": "Difficulty level played"
+    }
+  },
+  "required": [
+    "student_id",
+    "game_name",
+    "subject",
+    "score"
+  ]
+}

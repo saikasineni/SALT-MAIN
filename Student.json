@@ -1,0 +1,141 @@
+{
+  "name": "Student",
+  "type": "object",
+  "properties": {
+    "student_name": {
+      "type": "string",
+      "description": "Full name of the student"
+    },
+    "grade": {
+      "type": "string",
+      "enum": [
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12"
+      ],
+      "description": "Student's grade level"
+    },
+    "school": {
+      "type": "string",
+      "description": "School name"
+    },
+    "preferred_language": {
+      "type": "string",
+      "enum": [
+        "english",
+        "spanish",
+        "hindi",
+        "french",
+        "local"
+      ],
+      "default": "english",
+      "description": "Preferred language for content"
+    },
+    "total_points": {
+      "type": "number",
+      "default": 0,
+      "description": "Total points earned across all subjects"
+    },
+    "level": {
+      "type": "number",
+      "default": 1,
+      "description": "Overall student level"
+    },
+    "badges": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of earned badges"
+    },
+    "subjects_progress": {
+      "type": "object",
+      "properties": {
+        "mathematics": {
+          "type": "object",
+          "properties": {
+            "level": {
+              "type": "number",
+              "default": 1
+            },
+            "points": {
+              "type": "number",
+              "default": 0
+            },
+            "chapters_completed": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "science": {
+          "type": "object",
+          "properties": {
+            "level": {
+              "type": "number",
+              "default": 1
+            },
+            "points": {
+              "type": "number",
+              "default": 0
+            },
+            "chapters_completed": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "technology": {
+          "type": "object",
+          "properties": {
+            "level": {
+              "type": "number",
+              "default": 1
+            },
+            "points": {
+              "type": "number",
+              "default": 0
+            },
+            "chapters_completed": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "engineering": {
+          "type": "object",
+          "properties": {
+            "level": {
+              "type": "number",
+              "default": 1
+            },
+            "points": {
+              "type": "number",
+              "default": 0
+            },
+            "chapters_completed": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "student_name",
+    "grade"
+  ]
+}
